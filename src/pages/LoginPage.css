@@ -1,0 +1,116 @@
+.login-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) var(--space-md);
+  min-height: calc(100vh - 300px);
+}
+
+.login-page__container {
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn var(--transition-slow) ease;
+}
+
+.login-page__title {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  color: var(--sw-dark);
+  line-height: 1.3;
+}
+
+.login-page__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-page__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.login-page__field {
+  width: 100%;
+}
+
+.login-page__input {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1rem;
+  background: var(--sw-gray-100);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  color: var(--sw-dark);
+}
+
+.login-page__input::placeholder {
+  color: var(--sw-gray-500);
+}
+
+.login-page__input:focus {
+  background: var(--sw-gray-200);
+  box-shadow: 0 0 0 2px var(--sw-blue);
+}
+
+.login-page__forgot {
+  font-size: 0.875rem;
+  color: var(--sw-dark);
+  align-self: flex-start;
+  transition: color var(--transition-fast);
+}
+
+.login-page__forgot:hover {
+  color: var(--sw-blue);
+}
+
+.login-page__error {
+  color: var(--sw-error);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.login-page__submit {
+  margin-top: var(--space-lg);
+  padding: var(--space-md) var(--space-2xl);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--sw-white);
+  background: var(--sw-blue);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  align-self: center;
+  min-width: 200px;
+}
+
+.login-page__submit:hover {
+  background: var(--sw-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.login-page__submit:active {
+  transform: translateY(0);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .login-page {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .login-page__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .login-page__submit {
+    width: 100%;
+  }
+}

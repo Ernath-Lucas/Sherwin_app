@@ -1,0 +1,209 @@
+.product-card {
+  background: var(--sw-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--sw-gray-200);
+  animation: fadeIn var(--transition-base) ease;
+}
+
+.product-card__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.product-card__info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  flex: 1;
+  min-width: 200px;
+}
+
+.product-card__ref {
+  font-weight: 600;
+  color: var(--sw-dark);
+  min-width: 60px;
+}
+
+.product-card__name {
+  color: var(--sw-gray-700);
+  flex: 1;
+}
+
+.product-card__size {
+  color: var(--sw-gray-500);
+  min-width: 40px;
+}
+
+.product-card__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.product-card__quantity {
+  display: flex;
+  align-items: center;
+  background: var(--sw-gray-100);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.product-card__quantity-input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  background: var(--sw-gray-100);
+  -moz-appearance: textfield;
+}
+
+.product-card__quantity-input::-webkit-outer-spin-button,
+.product-card__quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.product-card__quantity-arrows {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--sw-gray-200);
+}
+
+.product-card__quantity-arrow {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  color: var(--sw-gray-500);
+  background: var(--sw-gray-200);
+  transition: background var(--transition-fast);
+}
+
+.product-card__quantity-arrow:hover {
+  background: var(--sw-gray-300);
+}
+
+.product-card__quantity-arrow:first-child {
+  border-bottom: 1px solid var(--sw-gray-300);
+}
+
+.product-card__discount {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.product-card__discount-input {
+  width: 60px;
+  height: 40px;
+  padding: 0 var(--space-lg) 0 var(--space-sm);
+  text-align: center;
+  font-size: 1rem;
+  background: var(--sw-gray-100);
+  border-radius: var(--radius-sm);
+}
+
+.product-card__discount-symbol {
+  position: absolute;
+  right: var(--space-sm);
+  color: var(--sw-gray-500);
+  font-size: 0.875rem;
+}
+
+.product-card__price {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--sw-dark);
+  min-width: 80px;
+  text-align: right;
+}
+
+.product-card__add-btn {
+  padding: var(--space-sm) var(--space-lg);
+  background: transparent;
+  color: var(--sw-dark);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.product-card__add-btn:hover {
+  background: var(--sw-blue);
+  color: var(--sw-white);
+}
+
+.product-card__add-btn-mobile {
+  display: none;
+}
+
+.product-card__restriction {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(183, 28, 28, 0.08);
+  border-radius: var(--radius-sm);
+}
+
+.product-card__restriction-text {
+  color: var(--sw-error);
+  font-size: 0.875rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .product-card {
+    padding: var(--space-md);
+  }
+
+  .product-card__main {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-md);
+  }
+
+  .product-card__info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    min-width: auto;
+  }
+
+  .product-card__controls {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-card__add-btn {
+    display: none;
+  }
+
+  .product-card__add-btn-mobile {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--sw-gray-600);
+    background: var(--sw-gray-200);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .product-card__add-btn-mobile:hover {
+    background: var(--sw-blue);
+    color: var(--sw-white);
+  }
+
+  .product-card__price {
+    min-width: auto;
+  }
+}

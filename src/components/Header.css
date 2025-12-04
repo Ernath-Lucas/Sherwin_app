@@ -1,0 +1,196 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--sw-white);
+  border-bottom: 1px solid var(--sw-gray-200);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header__logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.header__languages {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header__lang-btn {
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  opacity: 0.6;
+}
+
+.header__lang-btn:hover,
+.header__lang-btn.active {
+  opacity: 1;
+}
+
+.header__flag {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--sw-gray-200);
+}
+
+.header__flag--uk {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23s)'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url(%23t)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.header__flag--fr {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Crect width='1' height='2' fill='%23002395'/%3E%3Crect width='1' height='2' x='1' fill='%23fff'/%3E%3Crect width='1' height='2' x='2' fill='%23ED2939'/%3E%3C/svg%3E");
+}
+
+.header__icon-btn {
+  position: relative;
+  padding: var(--space-xs);
+  color: var(--sw-dark);
+  transition: color var(--transition-fast);
+}
+
+.header__icon-btn:hover {
+  color: var(--sw-blue);
+}
+
+.header__cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background: var(--sw-red);
+  color: var(--sw-white);
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__mobile-menu-btn {
+  display: none;
+  padding: var(--space-xs);
+}
+
+.header__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--sw-dark);
+  transition: all var(--transition-fast);
+}
+
+.header__hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.header__mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--sw-white);
+  border-bottom: 1px solid var(--sw-gray-200);
+  box-shadow: var(--shadow-lg);
+  animation: slideDown var(--transition-fast) ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+}
+
+.header__mobile-nav a,
+.header__mobile-nav button {
+  padding: var(--space-md);
+  font-size: 1rem;
+  color: var(--sw-dark);
+  border-bottom: 1px solid var(--sw-gray-200);
+  text-align: left;
+}
+
+.header__mobile-nav a:last-child,
+.header__mobile-nav button:last-child {
+  border-bottom: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header__container {
+    padding: var(--space-md);
+  }
+
+  .header__logo-img {
+    height: 32px;
+  }
+
+  .header__user-btn {
+    display: none;
+  }
+
+  .header__mobile-menu-btn {
+    display: block;
+  }
+
+  .header__mobile-menu {
+    display: block;
+  }
+}

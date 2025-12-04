@@ -1,0 +1,46 @@
+.cookie-button {
+  position: fixed;
+  bottom: 180px;
+  left: var(--space-lg);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--sw-white);
+  color: var(--sw-dark);
+  border: 1px solid var(--sw-gray-300);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.cookie-button:hover {
+  background: var(--sw-gray-100);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.cookie-button svg {
+  flex-shrink: 0;
+}
+
+.cookie-button__text {
+  white-space: nowrap;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .cookie-button {
+    bottom: 200px;
+    left: var(--space-md);
+    padding: var(--space-sm);
+  }
+
+  .cookie-button__text {
+    display: none;
+  }
+}
