@@ -1,12 +1,18 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
+import { useOrders } from '../context/OrderContext';
 import { searchProducts } from '../data/products';
 import './CartPage.css';
 
 const CartPage = () => {
   const { t, language } = useLanguage();
-  const { cartItems, removeFromCart, getCartTotal } = useCart();
+  const { cartItems, removeFromCart, getCartTotal, clearCart } = useCart();
+  const { user } = useAuth();
+  const { createOrder } = useOrders();
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
 
   const getProductName = (product) => {
@@ -22,6 +28,15 @@ const CartPage = () => {
       const results = searchProducts(searchQuery);
       // Could navigate to search or handle inline
       console.log('Search results:', results);
+    }
+  };
+
+  const handleOrder = () => {
+    if (cartItems.length > 0 && user) {
+      createOrder(user.email, user.name, cartItems);
+      clearCart();
+      alert(t('orderSuccess') || 'Order placed successfully!');
+      navigate('/home');
     }
   };
 
@@ -108,7 +123,7 @@ const CartPage = () => {
 
         {cartItems.length > 0 && (
           <div className="cart-page__actions">
-            <button className="cart-page__order-btn">
+            <button className="cart-page__order-btn" onClick={handleOrder}>
               {t('order')}
             </button>
           </div>

@@ -26,6 +26,7 @@ export const translations = {
     cartTitle: "Your Cart :",
     total: "TOTAL :",
     order: "Order",
+    orderSuccess: "Order placed successfully!",
     referencePlaceholder: "Reference (ex: 7005)",
     
     // Footer
@@ -35,7 +36,57 @@ export const translations = {
     mekoCode: "MEKO Code of Practice",
     forcedLabor: "Forced Labor and Human Trafficking",
     cookieSettings: "Cookie Settings",
-    copyright: "©2025 The Sherwin-Williams Company"
+    copyright: "©2025 The Sherwin-Williams Company",
+
+    // Admin
+    adminTitle: "Admin Dashboard",
+    manageProduct: "Manage Products",
+    manageUser: "Manage Users",
+    manageOrders: "Manage Orders",
+    access: "Access",
+    back: "Back",
+
+    // Admin Users
+    adminUserTitle: "User Management",
+    deleteUser: "Delete User",
+    name: "Name",
+    userNameOrEmail: "User name or email...",
+    delete: "Delete",
+    confirmDelete: "Confirm Deletion",
+    deleteUserConfirm: "Are you sure you want to delete the user",
+    forgottenPasswordRequest: "Password Reset Requests",
+    passwordRequest: "requested a password reset",
+    forgottenPasswords: "Forgotten passwords",
+    newPassword: "New password",
+    confirmPassword: "Confirm password",
+    resetPassword: "Reset Password",
+    noPasswordRequests: "No password reset requests",
+
+    // Admin Products
+    adminProductTitle: "Product Management",
+    addProduct: "Add Product",
+    productName: "Product name",
+    reference: "Reference",
+    productReference: "Reference...",
+    productPrice: "Price...",
+    productReferencePlaceholder: "Product reference (ex: SW 7005)...",
+    add: "Add",
+    patchProduct: "Modify Product",
+    deleteProduct: "Delete Product",
+    deleteProductConfirm: "Are you sure you want to delete the product",
+    searchProduct: "Search product...",
+    search: "Search",
+    validate: "Validate",
+    productNotFound: "Product not found",
+
+    // Admin Orders
+    adminOrdersTitle: "Order Management",
+    cart: "'s Cart",
+    ordersTitle: "Customer Orders",
+    noOrders: "No orders to display",
+    quantity: "Qty",
+    price: "Price",
+    removeItem: "Remove item"
   },
   fr: {
     // Login page
@@ -64,6 +115,7 @@ export const translations = {
     cartTitle: "Votre Panier :",
     total: "TOTAL :",
     order: "Commander",
+    orderSuccess: "Commande passée avec succès !",
     referencePlaceholder: "Référence (ex: 7005)",
     
     // Footer
@@ -73,6 +125,56 @@ export const translations = {
     mekoCode: "Code de pratique MEKO",
     forcedLabor: "Travail forcé et traite des êtres humains",
     cookieSettings: "Paramètres des cookies",
-    copyright: "©2025 The Sherwin-Williams Company"
+    copyright: "©2025 The Sherwin-Williams Company",
+
+    // Admin
+    adminTitle: "Tableau de bord Admin",
+    manageProduct: "Gérer les Produits",
+    manageUser: "Gérer les Utilisateurs",
+    manageOrders: "Gérer les Commandes",
+    access: "Accéder",
+    back: "Retour",
+
+    // Admin Users
+    adminUserTitle: "Gestion des Utilisateurs",
+    deleteUser: "Supprimer un utilisateur",
+    name: "Nom",
+    userNameOrEmail: "Nom ou email de l'utilisateur...",
+    delete: "Supprimer",
+    confirmDelete: "Confirmer la suppression",
+    deleteUserConfirm: "Êtes-vous sûr de vouloir supprimer l'utilisateur",
+    forgottenPasswordRequest: "Demandes de réinitialisation de mot de passe",
+    passwordRequest: "a demandé une réinitialisation de mot de passe",
+    forgottenPasswords: "Mots de passe oubliés",
+    newPassword: "Nouveau mot de passe",
+    confirmPassword: "Confirmer le mot de passe",
+    resetPassword: "Réinitialiser",
+    noPasswordRequests: "Aucune demande de réinitialisation",
+
+    // Admin Products
+    adminProductTitle: "Gestion des Produits",
+    addProduct: "Ajouter un produit",
+    productName: "Nom du produit",
+    reference: "Référence",
+    productReference: "Référence...",
+    productPrice: "Prix...",
+    productReferencePlaceholder: "Référence du produit (ex: SW 7005)...",
+    add: "Ajouter",
+    patchProduct: "Modifier un produit",
+    deleteProduct: "Supprimer un produit",
+    deleteProductConfirm: "Êtes-vous sûr de vouloir supprimer le produit",
+    searchProduct: "Rechercher un produit...",
+    search: "Rechercher",
+    validate: "Valider",
+    productNotFound: "Produit non trouvé",
+
+    // Admin Orders
+    adminOrdersTitle: "Gestion des Commandes",
+    cart: " Panier de",
+    ordersTitle: "Commandes clients",
+    noOrders: "Aucune commande à afficher",
+    quantity: "Qté",
+    price: "Prix",
+    removeItem: "Supprimer l'article"
   }
 };

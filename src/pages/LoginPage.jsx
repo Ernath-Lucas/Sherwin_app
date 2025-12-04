@@ -21,9 +21,13 @@ const LoginPage = () => {
       return;
     }
 
-    const success = login(email, password);
-    if (success) {
-      navigate('/home');
+    const result = login(email, password);
+    if (result.success) {
+      if (result.isAdmin) {
+        navigate('/admin');
+      } else {
+        navigate('/home');
+      }
     } else {
       setError('Invalid credentials');
     }

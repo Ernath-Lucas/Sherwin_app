@@ -1,0 +1,302 @@
+.admin-users {
+  flex: 1;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.admin-users__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.admin-users__back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--sw-blue);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  margin-bottom: var(--space-md);
+}
+
+.admin-users__back-btn:hover {
+  background: var(--sw-gray-200);
+  transform: translateX(-2px);
+}
+
+.admin-users__title {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: var(--space-xl);
+  color: var(--sw-dark);
+}
+
+.admin-users__section {
+  background: var(--sw-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  animation: fadeIn var(--transition-base) ease;
+}
+
+.admin-users__section-title {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+  color: var(--sw-dark);
+}
+
+.admin-users__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.admin-users__field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: 400px;
+}
+
+.admin-users__label {
+  font-weight: 500;
+  color: var(--sw-dark);
+  min-width: 80px;
+  text-align: right;
+}
+
+.admin-users__input {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1rem;
+  background: var(--sw-white);
+  border: 1px solid var(--sw-gray-300);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.admin-users__input:focus {
+  border-color: var(--sw-blue);
+  box-shadow: 0 0 0 2px rgba(107, 127, 227, 0.2);
+}
+
+.admin-users__btn {
+  padding: var(--space-md) var(--space-2xl);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--sw-white);
+  background: var(--sw-blue);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  margin-top: var(--space-md);
+}
+
+.admin-users__btn:hover {
+  background: var(--sw-blue-hover);
+}
+
+/* Password Requests */
+.admin-users__requests {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.admin-users__request {
+  background: var(--sw-gray-100);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.admin-users__request-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.admin-users__request-header:hover {
+  background: var(--sw-gray-200);
+}
+
+.admin-users__request-text {
+  font-weight: 500;
+  color: var(--sw-dark);
+}
+
+.admin-users__request-arrow {
+  font-size: 1.25rem;
+  color: var(--sw-gray-600);
+  transition: transform var(--transition-fast);
+}
+
+.admin-users__request-arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.admin-users__request-form {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--sw-gray-300);
+  flex-wrap: wrap;
+}
+
+.admin-users__request-field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.admin-users__request-label {
+  font-size: 0.875rem;
+  color: var(--sw-gray-700);
+  white-space: nowrap;
+}
+
+.admin-users__request-input {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.875rem;
+  background: var(--sw-white);
+  border: 1px solid var(--sw-gray-300);
+  border-radius: var(--radius-sm);
+  width: 140px;
+}
+
+.admin-users__request-btn {
+  padding: var(--space-xs) var(--space-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sw-white);
+  background: var(--sw-blue);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  margin-left: auto;
+}
+
+.admin-users__request-btn:hover {
+  background: var(--sw-blue-hover);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .admin-users {
+    padding: var(--space-md);
+  }
+
+  .admin-users__title {
+    font-size: 1.25rem;
+  }
+
+  .admin-users__section {
+    padding: var(--space-lg);
+  }
+
+  .admin-users__field {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-xs);
+  }
+
+  .admin-users__label {
+    text-align: center;
+    min-width: auto;
+  }
+
+  .admin-users__input {
+    text-align: center;
+  }
+
+  .admin-users__request-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-users__request-field {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-xs);
+  }
+
+  .admin-users__request-input {
+    width: 100%;
+  }
+
+  .admin-users__request-btn {
+    margin-left: 0;
+    margin-top: var(--space-sm);
+  }
+}
+
+/* Delete Modal */
+.admin-users__modal {
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.admin-users__modal-title {
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--sw-dark);
+  margin-bottom: var(--space-lg);
+}
+
+.admin-users__modal-text {
+  font-size: 1rem;
+  color: var(--sw-gray-700);
+  margin-bottom: var(--space-2xl);
+  line-height: 1.6;
+}
+
+.admin-users__modal-text strong {
+  color: var(--sw-dark);
+  font-weight: 600;
+}
+
+.admin-users__modal-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.admin-users__modal-btn {
+  padding: var(--space-md) var(--space-2xl);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  min-width: 120px;
+}
+
+.admin-users__modal-btn--cancel {
+  color: var(--sw-dark);
+  background: var(--sw-gray-200);
+}
+
+.admin-users__modal-btn--cancel:hover {
+  background: var(--sw-gray-300);
+}
+
+.admin-users__modal-btn--confirm {
+  color: var(--sw-white);
+  background: #d32f2f;
+}
+
+.admin-users__modal-btn--confirm:hover {
+  background: #b71c1c;
+}
